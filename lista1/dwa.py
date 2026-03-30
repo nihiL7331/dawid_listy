@@ -16,16 +16,14 @@ infolajn = kolejka()
 oblodzeni = []
 with open("infolinia.txt", "r") as f:
     for lajn in f:
-        elemntas = lajn.strip().split()
-        if not elemntas:
+        lajn = lajn.strip()
+        if not lajn:
             continue
 
-        komenda = elemntas[0]
-
-        if komenda == "ZGLOSZENIE:":
-            imie = " ".join(elemntas[1:])
+        if lajn.startswith("ZGLOSZENIE:"):
+            imie = lajn.split(":", 1)[1].strip()
             infolajn.enqueue(imie)
-        elif komenda == "KONSULTANT_WOLNY":
+        elif "KONSULTANT_WOLNY" in lajn:
             cwel = infolajn.dequeue()
             if cwel:
                 oblodzeni.append(f"Rozmowa z: {cwel}")
