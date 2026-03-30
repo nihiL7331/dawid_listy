@@ -88,12 +88,13 @@ Wszystkie rozwiazania z tej listy musisz dostarczyc mi w formie *Pull Requesta* 
   `git clone <LINK_DO_TWOJEGO_REPO>`
 3. Stworz wlasna *galaz* (branch) na swoje rozwiazania. Nie piszemy bezposrednio w `main`! \
   `git checkout -b rozwiazania-lista1`
-4. Po rozwiazaniu kazdego zadania, zapisz ten stan w historii: \
+4. Stworz wlasny folder na rozwiazane zadania w folderze `lista1`. Nazwij go `rozwiazania`. Zapisuj tam rozwiazanie kazdego zadania w oddzielnym pliku.
+5. Po rozwiazaniu kazdego zadania, zapisz ten stan w historii: \
   `git add .` \
-  `git commit -m "Dodano implementacje drzewa BST (Zadanie 2)"`
-5. Gdy skonczysz cala liste, wyslij swoja galaz na serwer: \
+  `git commit -m "added ONP calculator logic (ex2)"`
+6. Gdy skonczysz cala liste, wyslij swoja galaz na serwer: \
   `git push origin rozwiazania-lista1`
-6. Wejdz na GitHuba i otworz PR. Wtedy bede mogl zrobic Ci *Code Review*.
+7. Wejdz na GitHuba i otworz PR. Wtedy bede mogl zrobic Ci *Code Review*.
 #v(2em)
 #line(length: 100%, stroke: 1pt + rgb("333333"))
 #v(2em)
