@@ -63,7 +63,22 @@ Na tej liscie przestaniemy uzywac czystych komend typu `git commit`. Twoim zadan
 
 #v(2em)
 
-*Maszyna RAM* \
+*Algorytm szybkiego potegowania (zadanie 1)* \
+Zwykle potegowanie, np. $x^n$, wymaga $n-1$ mnozen. Wyliczenie $2^10$ to $2*2*dots*2$ (zlozonosc liniowa $O(n)$). Dla malych liczb to nie problem, ale co jesli chcemy podniesc macierz do potegi miliardowej? Miliard operacji mnozenia macierzy zablokuje komputer na dlugi czas. \
+Tutaj z pomoca przychodzi strategia *Dziel i zwyciezaj*. Zauwaz prosta matematyczna zaleznosc:
+- Jesli $n$ jest parzyste, mozemy to zapisac jako $x^n=(x^(n/2))^2$,
+- Jesli $n$ jest nieparzyste, wyciagamy jednego $x$ przed nawias: $x^n=x*x^(n-1)$ (a $n-1$ jest juz parzyste!).
+Jak to dziala w praktyce? \
+Wezmy jako przyklad $x^8$. Zamiast mnozyc $x$ osiem razy, algorytm robi to tak:
+1. Oblicza $x^2$ (jedno mnozenie)
+2. Oblicza $(x^2)^2=x^4$ (drugie mnozenie)
+3. Oblicza $(x^4)^2=x^8$ (trzecie mnozenie)
+Wynik otrzymujemy w zaledwie $3$ krokach zamiast $7$. \
+Dzieki temu ten algorytm redukuje zlozonosc czasowa z liniowego $O(n)$ do logarytmicznego $O(log n)$. Oznacza to, ze podniesienie liczby (lub macierzy) do potegi $1 000 000 000$ wymaga zaledwie okolo 30 operacji mnozenia!
+
+#v(2em)
+
+*Maszyna RAM (zadanie 4)* \
 Wiekszosc jezykow, ktorych uzywasz (jak Python), to jezyki wysokiego poziomu. Ukrywaja one przed toba to, jak procesor faktycznie liczy dane. Jednak ponizej poziomu abstrakcji Pythona, czy nawet C, znajduje sie poziom, na ktorym programisci musza myslec w kategoriach *architektury procesora* (stad wspolczesnie rozny assembler na roznych platformach). Tutaj pojawia sie maszyna RAM. \
 Maszyna RAM to uproszczony model matematyczny komputera. Sklada sie z:
 1. Pamieci: nieskonczonej tasmy rejestrow (szufladek), ponumerowanych $r_0, r_1, r_2, dots$
@@ -80,7 +95,7 @@ HALT    // zakoncz program
 
 #v(2em)
 
-*Grafy i algorytm BFS* \
+*Grafy i algorytm BFS (zadanie 5)* \
 Graf to zbior punktow (nazywanych wezlami/wierzcholkami) polaczonych liniami (krawedziami). Grafy sa wszedzie - sluza do modelowania sieci drogowych, laczenia znajomych na Facebooku, czy polaczen sieciowych. \
 Zauwaz, ze dwuwymiarowy labirynt to nic innego jak graf. Kazde wolne pole to wezel, a krawedzie lacza go z sasiednimi polami (o ile nie ma tam sciany). \
 Aby znalezc wyjscie z labiryntu, uzywamy algorytmu BFS, czyli przeszukiwania wszerz. \
