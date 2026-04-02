@@ -97,7 +97,7 @@ Algorytm BFS opiera sie na strukturze *FIFO* (kolejce). Kiedy odwiedzamy pole, w
 == Zadanie 1 (rozgrzewkowe)
 Pamietasz implementacje ciagu Fibonacciego z poprzedniej listy? Tak sie sklada, ze da sie wyznaczyc $n$-ta liczbe Fibonacciego w szybszy sposob. \
 Uzywajac ponizszej zaleznosci:
-$ mat(1, 1; 1, 0)^n=mat(F_(n+1), F_n; F_n; F_(n-1)) $
+$ mat(1, 1; 1, 0)^n=mat(F_(n+1), F_n; F_n, F_(n-1)) $
 mozemy wykorzystac podnoszenie tej macierzy do potegi $n$-tej aby otrzymac oczekiwana wartosc. Twoje zadania to kolejno:
 1. Zaimplementuj klase `Matrix2x2`, trzymajaca odpowiednie dane.
 2. Dowiedz sie, czym jest *operator overloading*. Zaimplementuj go, tj. zaimplementuj funkcje:
