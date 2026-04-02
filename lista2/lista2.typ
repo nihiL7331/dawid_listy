@@ -118,6 +118,8 @@ mozemy wykorzystac podnoszenie tej macierzy do potegi $n$-tej aby otrzymac oczek
 2. Dowiedz sie, czym jest *operator overloading*. Zaimplementuj go, tj. zaimplementuj funkcje:
 - `__mul__(self, other)`: mnozenie dwoch obiektow `Matrix2x2`.
 - `__pow__(self, n)`: podnoszenie macierzy do potegi $n$ (tutaj docelowo znajdzie sie algorytm z punktu 4!)
+*Wzor mnozenia macierzy:*
+$ mat(a, b; c, d) times mat(e, f; g, h) = mat(a e+b g, a f+b h; c e+d g, c f+d h) $
 3. Wykorzystujac implementacje klasy `Matrix2x2`, napisz funkcje o sygnaturze `fib_mat(n)` zwracajaca $n$-ta liczbe Fibonacciego uzywajaca powyzszej zaleznosci.
 4. \* Rozwaz, w jaki sposob *algorytm szybkiego potegowania* moglby przyspieszyc ten kod. Sprobuj zaimplementowac ten algorytm.
 5. Zcommituj ten kod przy uzyciu lazygit na nowo utworzony branch o nazwie rozwiazania-lista-2.
