@@ -1,0 +1,26 @@
+# Pobieranie danych
+READ        # Pobierz A
+STORE 1
+READ        # Pobierz B
+STORE 2
+
+# Tworzenie stałej 1 w rejestrze R4
+# (Nie mamy komendy LOAD_CONST, więc robimy to sprytnie)
+READ        # Użytkownik proszony o podanie '1'
+STORE 4
+
+# Pętla mnożenia
+LOOP:
+LOAD 2      # Wczytaj B (licznik)
+JZERO FINISH # Jeśli B == 0, skocz do końca
+SUB 4       # B = B - 1
+STORE 2     # Zapisz nowe B
+LOAD 3      # Wczytaj dotychczasowy wynik
+ADD 1       # Dodaj A
+STORE 3     # Zapisz nowy wynik
+JUMP LOOP
+
+FINISH:
+LOAD 3      # Załaduj wynik końcowy do akumulatora
+LOG         # Wyświetl stan
+HALT
