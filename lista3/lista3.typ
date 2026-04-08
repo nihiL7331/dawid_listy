@@ -81,6 +81,7 @@ Na maturze z informatyki zawsze pojawia sie zadanie z baz danych. Polega ono na 
 Ponizej znajduje sie pseudokod pewnego klasycznego algorytmu pracujacego na tablicy $A$ o rozmiarze $n$.
 ```text
 Dane:
+  n - dodatnia liczba calkowita, rozmiar tablicy A
   A - tablica n liczb calkowitych, indeksowana od 1 do n
   k - dodatnia liczba calkowita
 
