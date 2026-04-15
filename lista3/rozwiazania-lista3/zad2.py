@@ -1,5 +1,11 @@
 def isAnagram(word1, word2):
+    n = len(word1)
+    m = len(word2)
+
     licznik = {}
+
+    if n != m:
+        return False
 
     for i in word1:
         if i in licznik:
