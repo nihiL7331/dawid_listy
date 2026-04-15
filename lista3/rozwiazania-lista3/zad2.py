@@ -29,10 +29,16 @@ print(isAnagram("cwel", "lewc"))
 
 
 # Dane:
+#
 # word1 - slowo pierwsze (niemozliwe) string?ikr ale to zapisac ?!?!?
 # word2 - slowo drugie (o japierdole naprawde?)
-#
+# n - dlugosc word1
+# m - dlugosc word2
+
 # Algorytm:
+
+# jesli n jest rozne od m to:
+# zwroc falsz
 
 # licznik <- tablica
 # dla kazdego znaku i w word1 wykonuj:
