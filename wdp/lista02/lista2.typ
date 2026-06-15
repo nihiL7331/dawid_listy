@@ -238,11 +238,11 @@ Rozwazmy nastepujaca funkcje:
 #codebox[
   ```c
   unsigned int magic(char* str, char ch) {
-    unsigned int count = 0;
+    unsigned int i = 0;
     for (char* curr = str;*(curr++) != '\0';)
-      count += (*curr == ch);
+      i += (*curr == ch);
 
-    return count;
+    return i;
   }
   ```
 ]
